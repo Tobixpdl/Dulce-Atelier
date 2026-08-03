@@ -1,0 +1,1 @@
+export const businessConfig={name:'Dulce Atelier',whatsappNumber:'ACÁ_PONÉ_TU_NÚMERO_DE_WHATSAPP',address:'Zona Norte, Buenos Aires',instagram:'@dulceatelier',deliveryCost:3000,minimumOrder:10000,customCakeLeadTime:7,regularCakeLeadTime:3,simpleProductLeadTime:2,agencyName:'ACÁ_PONÉ_EL_NOMBRE_DE_TU_MARCA'};

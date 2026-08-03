@@ -1,0 +1,1 @@
+export const isoToday=()=>new Date().toISOString().slice(0,10); export const addDays=(n:number)=>{const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)}; export const niceDate=(s:string)=>s?new Intl.DateTimeFormat('es-AR').format(new Date(`${s}T12:00:00`)): 'A coordinar';
