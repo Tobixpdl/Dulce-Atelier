@@ -285,7 +285,7 @@ function App() {
             <img
               className="parallax"
               data-speed=".08"
-              src={publicAsset('gallery/custom-cake.webp')}
+              src={publicAsset('images/gallery/custom-cake.webp')}
               alt="Torta personalizada con terminaciones artesanales"
               width={1200}
               height={1400}
