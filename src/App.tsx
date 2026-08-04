@@ -404,7 +404,7 @@ function App() {
             }
           >
             <img
-              src={publicAsset('products/box.png')}
+              src={publicAsset('images/products/box.png')}
               alt="Box dulce con una selección de mini pastelería"
               width={736}
               height={552}
@@ -418,7 +418,7 @@ function App() {
         <section id="nosotros" className="story-section">
           <div className="story-image reveal">
             <img
-              src={publicAsset('gallery/gallery-detail.webp')}
+              src={publicAsset('images/gallery/gallery-detail.webp')}
               alt="Detalle de una terminación de pastelería artesanal"
               width={900}
               height={1100}
