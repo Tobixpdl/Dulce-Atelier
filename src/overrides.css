@@ -9,6 +9,7 @@ body{overflow-x:hidden}
 .card-action{border:0;background:var(--cocoa);color:var(--ivory);padding:.42rem .62rem;font-size:.64rem;font-weight:700}.card-action:hover{background:var(--wine)}
 .collection-section{width:100vw;padding-left:clamp(1rem,2.4vw,3rem);padding-right:clamp(1rem,2.4vw,3rem)}
 .collection-heading,.collection-tools,.product-grid{max-width:none;width:100%}
+.product-grid{align-items:stretch}.catalog-piece,.product-card{height:100%}.product-card{display:flex;flex-direction:column}.product-content{display:flex;flex:1;flex-direction:column}.product-bottom{margin-top:auto;min-height:34px}
 @media(max-width:900px){.hero-note{display:block}.atelier-hero{width:100%}}
 
 /* Catálogo: el marco define la altura; la foto sólo rellena ese marco.
@@ -18,10 +19,13 @@ body{overflow-x:hidden}
 .product-photo img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
 
 @media(max-width:520px){
-  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem .75rem}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem .75rem;align-items:stretch}
   .product-photo{aspect-ratio:4/4.85}
-  .product-content{padding-top:.7rem}
-  .product-content>p:not(.eyebrow){min-height:0}
+  .product-card{height:100%;display:flex;flex-direction:column}
+  .product-content{display:flex;flex:1;flex-direction:column;padding-top:.7rem}
+  .product-content h3{min-height:2.2em}
+  .product-content>p:not(.eyebrow){min-height:3.9em}
+  .product-bottom{margin-top:auto}
   .product-bottom{gap:.35rem}
   .card-action{padding:.42rem .5rem;font-size:.6rem;white-space:nowrap}
 }
