@@ -5,8 +5,29 @@ body{overflow-x:hidden}
 .hero-wash{background:linear-gradient(90deg,#f8f5efef 0%,#f8f5efc9 38%,#f8f5ef22 78%)}
 .hero-note{position:static;display:inline-block;margin:1.4rem 0 0;padding:.55rem .7rem;border-left:2px solid var(--wine);background:#f8f5efdc;color:var(--cocoa);font-size:.66rem;line-height:1.55;text-transform:uppercase;letter-spacing:.07em}
 .product-grid{gap:2rem 1rem}.catalog-piece-0,.catalog-piece-2,.catalog-piece-4{margin-top:0}
-.product-photo img{aspect-ratio:4/4.15}.product-bottom{align-items:center}.product-bottom small{display:none}
+.product-bottom{align-items:center}.product-bottom small{display:none}
 .card-action{border:0;background:var(--cocoa);color:var(--ivory);padding:.42rem .62rem;font-size:.64rem;font-weight:700}.card-action:hover{background:var(--wine)}
 .collection-section{width:100vw;padding-left:clamp(1rem,2.4vw,3rem);padding-right:clamp(1rem,2.4vw,3rem)}
 .collection-heading,.collection-tools,.product-grid{max-width:none;width:100%}
 @media(max-width:900px){.hero-note{display:block}.atelier-hero{width:100%}}
+
+/* Catálogo: el marco define la altura; la foto sólo rellena ese marco.
+   Evita que la proporción intrínseca de una imagen vuelva las tarjetas altas en móvil. */
+.product-grid>*{min-width:0}
+.product-photo{aspect-ratio:4/4.7}
+.product-photo img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+
+@media(max-width:520px){
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.75rem .75rem}
+  .product-photo{aspect-ratio:4/4.85}
+  .product-content{padding-top:.7rem}
+  .product-content>p:not(.eyebrow){min-height:0}
+  .product-bottom{gap:.35rem}
+  .card-action{padding:.42rem .5rem;font-size:.6rem;white-space:nowrap}
+}
+
+/* En anchos demasiado estrechos priorizamos legibilidad antes que dos columnas. */
+@media(max-width:360px){
+  .product-grid{grid-template-columns:1fr;gap:2rem}
+  .product-photo{aspect-ratio:4/4.4}
+}
