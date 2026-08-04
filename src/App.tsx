@@ -349,7 +349,7 @@ function App() {
           <img
             className="parallax"
             data-speed=".1"
-            src={publicAsset('gallery/atelier.webp')}
+            src={publicAsset('images/gallery/atelier.webp')}
             alt="Mesa de trabajo de pastelería y preparación artesanal"
             width={1400}
             height={900}
